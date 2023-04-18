@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rabobank</groupId>
-    <artifactId>bank-application</artifactId>
+    <artifactId>bank-application-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bank-application</name>
     <description>bank-application</description>
