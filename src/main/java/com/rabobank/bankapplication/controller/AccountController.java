@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -58,4 +59,7 @@ public class AccountController {
         List<Transaction> transactions = transactionService.getTransactionsByAccountId(accountId);
         return new ResponseEntity<>(transactions, HttpStatus.OK);
     }
+
+
+
 }

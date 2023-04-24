@@ -23,6 +23,14 @@ public class TransactionServiceImpl implements TransactionService {
     public List<Transaction> getTransactionsByAccountId(Long accountId) {
         return transactionRepo.findTransactionsByAccountId(accountId);
     }
+
+    @Override
+    public List<Transaction> getTransactionsByCategoryIdAndAccountId(Long accountId, Long categoryId) {
+        List<Transaction> transactions = transactionRepo.findTransactionsByAccountIdAndCategoryId(accountId, categoryId);
+
+        return transactions;
+    }
+
     @Override
     public Transaction getTransactionById(Long id) {
 
@@ -39,7 +47,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public void updateTransaction(Long id, Transaction transaction) {
         Transaction transactionFromDb = transactionRepo.findById(id).get();
-        System.out.println(transactionFromDb.toString());
+//        System.out.println(transactionFromDb.toString());
         transactionFromDb.setDate(transaction.getDate());
         transactionFromDb.setTitle(transaction.getTitle());
         transactionFromDb.setAmount(transaction.getAmount());
