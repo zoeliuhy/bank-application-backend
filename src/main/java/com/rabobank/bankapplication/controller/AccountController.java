@@ -1,7 +1,6 @@
 package com.rabobank.bankapplication.controller;
 
 import com.rabobank.bankapplication.model.Account;
-import com.rabobank.bankapplication.model.Transaction;
 import com.rabobank.bankapplication.service.AccountService;
 import com.rabobank.bankapplication.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -19,8 +19,6 @@ public class AccountController {
 
     @Autowired
     private AccountService accountService;
-    @Autowired
-    private TransactionService transactionService;
 
     @GetMapping
     public ResponseEntity<List<Account>> getAllAccounts() {
@@ -51,11 +49,5 @@ public class AccountController {
     public ResponseEntity<Account> deleteAccount(@PathVariable Long accountId) {
         accountService.deleteAccountById(accountId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-
-    @GetMapping("/{accountId}/transactions")
-    public ResponseEntity<List<Transaction>> getAllTransactionsByAccountId(@PathVariable Long accountId) {
-        List<Transaction> transactions = transactionService.getTransactionsByAccountId(accountId);
-        return new ResponseEntity<>(transactions, HttpStatus.OK);
     }
 }

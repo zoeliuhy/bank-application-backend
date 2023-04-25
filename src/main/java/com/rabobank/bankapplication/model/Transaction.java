@@ -22,12 +22,17 @@ public class Transaction {
     @Column(name="title")
     private String title;
     @Column(name="amount")
-    private String amount;
+    private double amount;
     @Column(name="description")
     private String description;
     @Column(name="accountId")
     private Long accountId;
+    @Column(name="categoryId")
+    private Long categoryId;
 
+//    @ManyToOne
+//    @JoinColumn(name="categoryId")
+//    private Category category;
 
 
 //    @Data annotation is from project Lombok. It generates the getters and setters for all the fields that we have in the todo class, equals method, and a toString method.

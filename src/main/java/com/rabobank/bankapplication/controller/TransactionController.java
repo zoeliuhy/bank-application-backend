@@ -18,6 +18,16 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
+    @GetMapping("/account={accountId}")
+    public ResponseEntity<List<Transaction>> getAllTransactionsByAccountId(@PathVariable Long accountId) {
+        List<Transaction> transactions = transactionService.getTransactionsByAccountId(accountId);
+        return new ResponseEntity<>(transactions, HttpStatus.OK);
+    }
+    @GetMapping("/account={accountId}/category={categoryId}")
+    public ResponseEntity<List<Transaction>> getTransactionsByAccountIdAndCategoryId(@PathVariable Long accountId, @PathVariable Long categoryId) {
+        List<Transaction> transactions = transactionService.getTransactionsByCategoryIdAndAccountId(accountId, categoryId);
+        return new ResponseEntity<>(transactions, HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<List<Transaction>> getAllTransactions() {
         List<Transaction> transactions = transactionService.getTransactions();
@@ -48,4 +58,5 @@ public class TransactionController {
         transactionService.deleteTransactionById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
 }

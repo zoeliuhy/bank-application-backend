@@ -12,6 +12,8 @@ public interface TransactionService {
 
     List<Transaction> getTransactionsByAccountId(Long accountId);
 
+    List<Transaction> getTransactionsByCategoryIdAndAccountId(Long accountId, Long categoryId);
+
     Transaction getTransactionById(Long id);
 
     Transaction createNewTransaction(Transaction transaction);
