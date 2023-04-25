@@ -22,46 +22,55 @@ public class CategoryLoader implements CommandLineRunner {
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Transport & travel")
+                            .categoryMultiplier(83)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Shopping")
+                            .categoryMultiplier(1143)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Groceries & household")
+                            .categoryMultiplier(802)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Fixed expenses")
+                            .categoryMultiplier(211)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Health & Wellness")
+                            .categoryMultiplier(105)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Restaurants & bars")
+                            .categoryMultiplier(802)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Investment & donations")
+                            .categoryMultiplier(105)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Income")
+                            .categoryMultiplier(105)
                             .build()
             );
             categoryRepo.save(
                     Category.builder()
                             .categoryName("+/- Debit Account")
+                            .categoryMultiplier(105)
                             .build()
             );
         }

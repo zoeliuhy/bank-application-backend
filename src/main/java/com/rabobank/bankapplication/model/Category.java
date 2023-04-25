@@ -20,4 +20,7 @@ public class Category {
     @Column(name="categoryName")
     private String categoryName;
 
+    @Column(name="categoryMultiplier")
+    private int categoryMultiplier;
+
 }
