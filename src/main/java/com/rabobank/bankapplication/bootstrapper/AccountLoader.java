@@ -23,15 +23,15 @@ public class AccountLoader implements CommandLineRunner {
                             .name("John S. #MyDebitAccount")
                             .email("john@gmail.com")
                             .iban("NL52RABO9323024236")
-                            .balance(1000)
+                            .balance(5000)
                             .build()
             );
             accountRepo.save(
                     Account.builder()
-                            .name("John S. #MySavingAccount")
-                            .email("john@gmail.com")
+                            .name("John S. & Jack A. #JointAccount")
+                            .email("john&jack@gmail.com")
                             .iban("NL52RABO9323024237")
-                            .balance(2000)
+                            .balance(3500)
                             .build()
             );
         }

@@ -67,12 +67,6 @@ public class CategoryLoader implements CommandLineRunner {
                             .categoryMultiplier(105)
                             .build()
             );
-            categoryRepo.save(
-                    Category.builder()
-                            .categoryName("+/- Debit Account")
-                            .categoryMultiplier(105)
-                            .build()
-            );
         }
     }
 }
