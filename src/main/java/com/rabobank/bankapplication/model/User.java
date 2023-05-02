@@ -11,19 +11,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name="categories")
-public class Category {
+@Table(name="users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(updatable = false, nullable = false)
     private Long id;
-    @Column(name="categoryName")
-    private String categoryName;
-
-    
-    private int categoryAmount;
-
-    @Column(name="categoryMultiplier")
-    private int categoryMultiplier;
-
+    @Column(name="username")
+    private String username;
+    @Column(name="password")
+    private String password;
+    @Column(name="name")
+    private String name;
+    @Column(name="email")
+    private String email;
+    @Column(name="address")
+    private String address;
+    @Column(name="phone")
+    private String phone;
 }
