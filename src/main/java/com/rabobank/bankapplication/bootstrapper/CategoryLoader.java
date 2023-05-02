@@ -64,7 +64,7 @@ public class CategoryLoader implements CommandLineRunner {
             categoryRepo.save(
                     Category.builder()
                             .categoryName("Income")
-                            .categoryMultiplier(105)
+                            .categoryMultiplier(0)
                             .build()
             );
         }

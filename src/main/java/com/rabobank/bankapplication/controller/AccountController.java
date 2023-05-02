@@ -2,7 +2,6 @@ package com.rabobank.bankapplication.controller;
 
 import com.rabobank.bankapplication.model.Account;
 import com.rabobank.bankapplication.service.AccountService;
-import com.rabobank.bankapplication.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
